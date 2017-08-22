@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+{% block content %}
+<main>
+    <div class="row text-center">
+        <h3>Wybierz zbiornik</h3>
+    </div>
+    <div class="row text-center">
+        <div id="map">
+            {% for res in all_revs %}
+            <div class="single">
+                <a href="details">{{ res.name }}</a>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</main>
+
+{% endblock %}

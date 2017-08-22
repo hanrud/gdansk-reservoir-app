@@ -1,0 +1,15 @@
+header, main, footer {
+    border: 1px solid;
+}
+
+#map {
+    border: 1px solid green;
+}
+
+.container {
+    border: 1px solid;
+}
+
+.details {
+    border: 1px solid red;
+}

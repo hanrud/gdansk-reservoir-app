@@ -1,0 +1,36 @@
+{% extends 'index.html' %} 
+{% block content %}
+
+<div class="row details">
+    <div class="col-md-10 col-md-offset-1">
+        <h2>Zbiornik {{% rev %}}</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 details text-center">
+        <div id="singleMap">
+            mapa google
+        </div>
+    </div>
+    <div class="col-md-6 details text-center">
+        <div class="desc">
+            <h4>Maksymalny poziom wody: /poziom/</h4>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1 details text-center" id='chart'>
+        wykres
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 details text-center">
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default">24 h</button>
+            <button type="button" class="btn btn-default">7 dni</button>
+            <button type="button" class="btn btn-default">30 dni</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

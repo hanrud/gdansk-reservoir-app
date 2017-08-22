@@ -18,9 +18,13 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from resv import views
+from resv.models import Reservoir
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),
-    url(r'^details/', views.details),
+    url(r'^admin/', admin.site.urls, name='admin'),
+    url(r'^$', views.index, name='index'),
+    url(r'^details/(?P<pk>[0-9]+)/$', views.details, name='details'),
 ]
+
+def details(request, pk):
+    Reservoir.objects.get(pk=pk)

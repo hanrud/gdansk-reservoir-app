@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render
-from django.views import generic
+from django.shortcuts import get_object_or_404
 
 from models import Reservoir
 
@@ -13,10 +13,7 @@ def index(request):
     context = {'all_revs': list}
     return render(request, 'index.html', context)
 
-def details(req):
-    # key = req.GET['id']
-    # #single_rev = Reservoir.objects.get(id=key)
-    # context = {'key': key}
-    # return render(req, 'details.html', context)
-    
-    return render(req, 'details.html')
+def details(request, pk):
+    resv = get_object_or_404(Reservoir, pk=pk)
+    return render(request, 'details.html', {'resv': resv})
+

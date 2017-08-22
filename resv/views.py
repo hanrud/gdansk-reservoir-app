@@ -19,3 +19,4 @@ def details(req):
     # context = {'key': key}
     # return render(req, 'details.html', context)
     
+    return render(req, 'details.html')

@@ -7,8 +7,8 @@ function initMap() {
   
     var resvLocation = {
         //zamienić przy dodawaniu i potem tutaj
-        lat: long,
-        lng: lat
+        lat: lat,
+        lng: long
     }
     var map = new google.maps.Map(document.getElementById('singleMap'), {
         zoom: 15,

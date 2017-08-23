@@ -49,7 +49,7 @@ $(document).ready(function () {
                     dataType: 'JSON',
                     success: function (res) {
                         singleData(res);
-//                        console.log(res);
+                        console.log(res.data);
                     },
                     error: function (err) {
                         console.log(err);
@@ -59,12 +59,20 @@ $(document).ready(function () {
         }
     }
     
-//    function singleData(req) {
-//        hour -= 6;
-//        console.log(req.data[hour][1]);
+    function singleData(req) {
+        hour -= 6;
 //        console.log($('#actualLevel'));
-//        
-//    }
+        var actMesurement = req.data[hour][1];
+        
+        if (actMesurement === null) {
+            actMesurement = 'brak pomiaru';
+        } else {
+            actMesurement = actMesurement.toString();
+        }
+     
+        $('#actualLevel').text(actMesurement);
+        
+    }
     
     
 });

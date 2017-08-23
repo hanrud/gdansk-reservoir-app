@@ -1,10 +1,10 @@
-{% extends 'index.html' %} 
-{% block content %}
+{% extends 'index.html' %} {% block content %}
 
 <script>
     var name = '{{ resv.name }}';
     var lat = '{{ resv.lat }}';
     var long = '{{ resv.long }}';
+
 </script>
 
 <div class="row details">
@@ -13,23 +13,26 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6 details text-center mapContainer">
+    <div class="col-md-5 col-md-offset-1 details text-center mapContainer">
         <div id="singleMap">
             mapa google
         </div>
     </div>
     <div class="col-md-6 details text-center">
         <div class="desc">
-            <h4>Aktualny poziom wody: <span id="actualLevel"></span></h4>
+            <h4>Ostatni pomiar <span id="actualLevel"></span> m, godzina: <span id="hour"></span></h4>
+            <!--            <svg id="fillgauge1" width="97%" height="250" onclick="gauge1.update(NewValue());"></svg>-->
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-10 col-md-offset-1 details text-center" id='chart'>
-        wykres
+    <div class="col-md-6 col-md-offset-3 details text-center" id='chart'>
+<!--        <div class="chart-container" style="position: relative; height:20vh; width:40vw">-->
+            <canvas id="myChart"></canvas>
+<!--        </div>-->
     </div>
 </div>
-<div class="row">
+<div class="row hidden">
     <div class="col-md-8 col-md-offset-2 details text-center">
         <div class="btn-group" role="group" aria-label="...">
             <button type="button" class="btn btn-default">24 h</button>

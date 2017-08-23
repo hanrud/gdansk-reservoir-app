@@ -1,7 +1,13 @@
-header,
-main,
-footer {
+header {
     border: 1px solid;
+    background-color:#2C3E50;
+    color: #fff;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Kaushan Script', cursive;
 }
 
 main {
@@ -57,7 +63,14 @@ canvas {
     width: 200px;
 }
 
+footer {
+    padding: 20px 0;
+}
+
 .footer-div{
     position: fixed;
     bottom: 0;
+    background-color: #2C3E50;
+    color: #fff;
+    
 }

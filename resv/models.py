@@ -10,3 +10,5 @@ class Reservoir(models.Model):
     long = models.DecimalField(decimal_places=6, max_digits=9, default=Decimal('0.000000'))
     addDate = models.DateField(auto_now_add=True)
 
+    def __unicode__(self):
+        return self.name

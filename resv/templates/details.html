@@ -1,20 +1,26 @@
 {% extends 'index.html' %} 
 {% block content %}
 
+<script>
+    var name = '{{ resv.name }}';
+    var lat = '{{ resv.lat }}';
+    var long = '{{ resv.long }}';
+</script>
+
 <div class="row details">
     <div class="col-md-10 col-md-offset-1">
-        <h2>Zbiornik {{% rev %}}</h2>
+        <h2>Zbiornik {{ resv }}</h2>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6 details text-center">
+    <div class="col-md-6 details text-center mapContainer">
         <div id="singleMap">
             mapa google
         </div>
     </div>
     <div class="col-md-6 details text-center">
         <div class="desc">
-            <h4>Maksymalny poziom wody: /poziom/</h4>
+            <h4>Aktualny poziom wody: <span id="actualLevel"></span></h4>
         </div>
     </div>
 </div>

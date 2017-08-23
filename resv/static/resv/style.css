@@ -13,3 +13,12 @@ header, main, footer {
 .details {
     border: 1px solid red;
 }
+
+.mapContainer {
+    position: relative;
+}
+
+#singleMap {
+    width: 100%;
+    height: 400px;
+}

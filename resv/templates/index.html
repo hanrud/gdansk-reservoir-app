@@ -1,19 +1,38 @@
 {% extends 'base.html' %} 
+  {% block js %} 
+       {% load static %}
+      <script src={% static "resv/mainMap.js" %}></script>
+  {% endblock %}
+  
 {% block content %}
+
+<script>
+    var resvAll = [];
+    {% for res in all_revs %}   
+        resvAll.push([{{ res.lat }}, {{res.long}}, '{{ res.name }}' ]);
+//     console.log(resvAll);
+    {% endfor %}
+//    console.log(resvAll);
+</script>
 <main>
-    <div class="row text-center">
-        <h3>Wybierz zbiornik</h3>
-    </div>
-    <div class="row text-center">
-        <div id="map">
+    <div class="container">
+        <div class="row text-center">
+            <h3>Wybierz zbiornik</h3>
+        </div>
+        <div class="row text-center">
+           <div class="mapContainer col-md-12">
+                <div id="map"></div>   
+           </div>
             {% for res in all_revs %}
             <div class="single">
                 <a href="{% url 'details' pk=res.pk %}">{{ res.name }}</a>
             </div>
             {% endfor %}
+               
             
         </div>
     </div>
+
 </main>
 
 {% endblock %}

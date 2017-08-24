@@ -14,6 +14,7 @@ $(document).ready(function () {
             day = d.getDate(),
             month = d.getMonth() + 1,
             year = d.getFullYear();
+        
         hour = d.getHours();
 
         if (day < 10) {

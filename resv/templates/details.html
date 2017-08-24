@@ -1,4 +1,14 @@
-{% extends 'index.html' %} {% block content %}
+{% extends 'index.html' %}
+ {% block js %} 
+    {% load static %}
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+        <script src={% static "liquidFillGauge.js" %}></script>
+        <script src={% static "resv/app.js" %}></script>
+        <script src={% static "resv/mapApp.js" %}></script>
+ {% endblock %}
+ 
+   {% block content %}
 
 <script>
     var name = '{{ resv.name }}';

@@ -12,14 +12,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src={% static "liquidFillGauge.js" %}></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
-    <script src={% static "resv/app.js" %}></script>
-    <script src={% static "resv/mapApp.js" %}></script>
+   {% block js %} {% endblock %}
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmUnVSzKhH9Yz8n9cP3bdPvN9XHMFI0Pg&callback=initMap">
-
-
     </script>
 </head>
 
@@ -34,13 +28,14 @@
         <main>
             {% block content %} {% endblock %}
         </main>
+        </div>
         <footer>
             <div class="row text-center col-md-12 footer-div">
                 <p>&copy footer text</p>
             </div>
 
         </footer>
-    </div>
+    
 
 
 

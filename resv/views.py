@@ -15,8 +15,7 @@ def index(request):
 
 def details(request, pk):
     resv = get_object_or_404(Reservoir, pk=pk)
-
-    return render(request, 'details.html', {'resv': resv, 'lat': resv.lat, 'long':resv.long})
+    return render(request, 'details.html', {'resv': resv, 'lat': resv.lat, 'long':resv.long, 'max':resv.maxLevel})
 
 
 

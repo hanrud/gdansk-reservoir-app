@@ -6,7 +6,6 @@ function initMap() {
     long = parseFloat(long);
   
     var resvLocation = {
-        //zamienić przy dodawaniu i potem tutaj
         lat: lat,
         lng: long
     }

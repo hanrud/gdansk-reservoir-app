@@ -33,6 +33,10 @@ main {
 .details {
     border: 1px solid green;
 }
+
+.row {
+    border: 1px solid red;
+}
 */
 
 .mapContainer {
@@ -45,7 +49,7 @@ main {
 }
 
 .desc {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .hidden {
@@ -57,7 +61,7 @@ main {
 }
 
 
-/*.liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }*/
+.liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
 
 canvas {
     width: 200px;
